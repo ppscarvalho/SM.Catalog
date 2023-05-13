@@ -4,9 +4,9 @@
 
 ##### Roteiro do desenvolvimento do Sistema Gestão de Loja (SM - Store Management)
 
-###### Data/Hora: 06/05/2023 15h00
+##### Data/Hora: 06/05/2023 15h00
 
-###### Arquitetura da API
+##### Arquitetura da API
 
 SM.Catalog
 <br/>-Core
@@ -26,6 +26,7 @@ SM.Catalog
   <p>
 
 [Implementing a Clean Architecture in ASP.NET Core 6](https://patelalpeshn.medium.com/implementing-a-clean-architecture-in-asp-net-core-6-985a31f717f5)
+
   </p>
 
 </blockquote>
