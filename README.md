@@ -2,11 +2,11 @@
 
 #### Trabalhode Conclusão de Curso
 
-##### Disciplian: PROJETO INTEGRADO - ARQUITETURA DE SOFTWARE DISTRIBUÍDO (2022)
+##### Disciplina: PROJETO INTEGRADO - ARQUITETURA DE SOFTWARE DISTRIBUÍDO (2022)
 
-##### Orienteador: Professor. Pedro Alves
+##### Orientador: Prof. Pedro Alves
 
-##### Iníco do desenvolvimento da API: 06/05/2023 15h00
+##### Início do desenvolvimento da API: 06/05/2023 15h00
 
 ##### A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto
 
