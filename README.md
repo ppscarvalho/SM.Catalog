@@ -10,14 +10,14 @@
 
 SM.Catalog
 <br/>-Core
-<br/> -SM.Catalog.Core.Application
-<br/> -SM.Catalog.Core.Domain
+<br/>&nbsp; -SM.Catalog.Core.Application
+<br/>&nbsp; -SM.Catalog.Core.Domain
 <br/>
-<br/>-Infrastructe
-<br/> -SM.Catalog.Infrastructe
+<br/>-Infrastructure
+<br/>&nbsp; -SM.Catalog.Infrastructure
 <br/>
 <br/>-Apresentation
-<br/> -SM.Catalog.Apresentation.Api
+<br/>&nbsp; -SM.Catalog.Apresentation.Api
 
 <blockquote>
   <p>
