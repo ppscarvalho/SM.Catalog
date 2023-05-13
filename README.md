@@ -16,4 +16,13 @@ SM.Catalog
 <br/>
 <br/>-Apresentation
 <br/> -SM.Catalog.Apresentation.Api
+
+<blockquote>
+  <p>
+    Esse é um bloco de citação.
+    Ele pode ter várias linhas.
+  </p>
+  <p>Inclusive, uma quebra de linha.</p>
+</blockquote>
+
 [Blog do Da2k](https://blog.da2k.com.br)
