@@ -8,38 +8,37 @@ using SM.Resource.Data;
 
 namespace SM.Catalog.Infrastructure.Repositories
 {
-    public class CategoryRepository : ICategoryRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly CatalogDbContext _context;
         private bool disposedValue;
 
-        public CategoryRepository(CatalogDbContext context)
+        public ProductRepository(CatalogDbContext context)
         {
             _context = context;
         }
 
         public IUnitOfWork UnitOfWork => _context;
 
-        public async Task<IEnumerable<Category>> GetAllCategory()
+        public async Task<IEnumerable<Product>> GetAllProduct()
         {
-            return await _context.Category.AsNoTracking().ToListAsync();
+            return await _context.Product.AsNoTracking().ToListAsync();
         }
 
-        public async Task<Category> GetCategoryById(Guid id)
+        public async Task<Product> GetProductById(Guid id)
         {
-            return await _context.Category.FirstOrDefaultAsync(e => e.Id == id);
+            return await _context.Product.FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public async Task<Category> AddCategory(Category category)
+        public async Task<Product> AddProduct(Product product)
         {
-            return (await _context.AddAsync(category)).Entity;
+            return (await _context.AddAsync(product)).Entity;
         }
 
-        public async Task<Category> UpdateCategory(Category category)
+        public async Task<Product> UpdateProduct(Product product)
         {
             await Task.CompletedTask;
-            _context.Entry(category).State = EntityState.Modified;
-            return category;
+            return (_context.Product.Update(product)).Entity;
         }
 
         protected virtual void Dispose(bool disposing)

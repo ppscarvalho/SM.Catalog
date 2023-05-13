@@ -19,39 +19,4 @@ namespace SM.Catalog.Infrastructure.Mappings
                 .HasForeignKey(p => p.CategoryId);
         }
     }
-
-    public class ProductMapping : IEntityTypeConfiguration<Product>
-    {
-        public void Configure(EntityTypeBuilder<Product> builder)
-        {
-            builder.ToTable("Product");
-
-            builder.Property(c => c.Name)
-                .HasMaxLength(100)
-                .IsRequired();
-
-            builder.Property(c => c.Description)
-                .HasMaxLength(200)
-                .IsRequired();
-
-            builder.Property(c => c.PurchaseValue)
-                .HasPrecision(18, 2)
-                .IsRequired();
-
-            builder.Property(c => c.SaleValue)
-                .HasPrecision(18, 2)
-                .IsRequired();
-
-            builder.Property(c => c.ProfitMargin)
-                .HasPrecision(18, 2)
-                .IsRequired();
-
-            builder.Property(c => c.Status)
-                .IsRequired();
-
-            builder.Property(c => c.Status)
-                .HasColumnType("bit")
-                .IsRequired();
-        }
-    }
 }

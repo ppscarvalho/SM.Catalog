@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using SM.Catalog.Core.Domain.Entities;
+using SM.Catalog.Core.Application.Commands.Product;
 
-namespace SM.Catalog.Core.Domain.Validations
+namespace SM.Catalog.Core.Application.Commands.Product.Validation
 {
-    public class ProductValidation : AbstractValidator<Product>
+    public class UpdateProductCommandValidation : AbstractValidator<UpdateProductCommand>
     {
-        public ProductValidation()
+        public UpdateProductCommandValidation()
         {
             RuleFor(c => c.Id)
                 .NotEqual(Guid.Empty)

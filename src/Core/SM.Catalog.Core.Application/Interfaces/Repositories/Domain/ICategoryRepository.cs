@@ -5,9 +5,9 @@ namespace SM.Catalog.Core.Application.Interfaces.Repositories.Domain
 {
     public interface ICategoryRepository : IRepository<Category>
     {
-        Task<IEnumerable<Category>> GetAll();
-        Task<Category> GetById(Guid id);
-        Task<Category> SaveCategory(Category category);
+        Task<IEnumerable<Category>> GetAllCategory();
+        Task<Category> GetCategoryById(Guid id);
+        Task<Category> AddCategory(Category category);
         Task<Category> UpdateCategory(Category category);
     }
 }

@@ -2,14 +2,14 @@
 {
     public class ProductModel
     {
-        public Guid CategoryId { get; private set; }
-        public string? Nome { get; private set; }
-        public string? Description { get; private set; }
-        public decimal PurchaseValue { get; private set; }
-        public decimal SaleValue { get; private set; }
-        public decimal ProfitMargin { get; private set; }
-        public int Stock { get; private set; }
-        public bool Status { get; private set; }
-        public CategoryModel? Category { get; private set; }
+        public Guid? Id { get; set; }
+        public Guid SupplierId { get; set; }
+        public Guid CategoryId { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public decimal PurchaseValue { get; set; }
+        public decimal SaleValue { get; set; }
+        public decimal ProfitMargin { get; set; }
+        public int Stock { get; set; }
     }
 }

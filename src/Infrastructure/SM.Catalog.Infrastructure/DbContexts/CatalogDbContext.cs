@@ -51,9 +51,10 @@ namespace SM.Catalog.Infrastructure.DbContexts
                     entry.Property("CreatedAt").CurrentValue = DateTime.Now;
 
                 if (entry.State == EntityState.Modified)
-                {
                     entry.Property("ModifiedAt").CurrentValue = DateTime.Now;
-                }
+
+                if (entry.State == EntityState.Modified)
+                    entry.Property("CreatedAt").IsModified = false;
             }
         }
 

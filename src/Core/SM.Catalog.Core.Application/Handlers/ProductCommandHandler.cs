@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using SM.Catalog.Core.Application.Commands.Category;
+using SM.Catalog.Core.Application.Commands.Product;
 using SM.Catalog.Core.Application.Interfaces.Repositories.Domain;
 using SM.Catalog.Core.Application.Models;
 using SM.Catalog.Core.Domain.Entities;
@@ -11,44 +11,46 @@ using SM.Resource.Util;
 
 namespace SM.Catalog.Core.Application.Handlers
 {
-    public class CategoryCommandHandler :
-        IRequestHandler<AddCategoryCommand, DefaultResult>,
-        IRequestHandler<UpdateCategoryCommand, DefaultResult>
+    public class ProductCommandHandler :
+    IRequestHandler<AddProductCommand, DefaultResult>,
+    IRequestHandler<UpdateProductCommand, DefaultResult>
     {
-        private readonly ICategoryRepository _categoryRepository;
+        private readonly IProductRepository _ProductRepository;
         private readonly IMediatorHandler _mediatorHandler;
         private readonly IMapper _mapper;
 
-        public CategoryCommandHandler(
-            ICategoryRepository categoryRepository,
+        public ProductCommandHandler(
+            IProductRepository ProductRepository,
             IMediatorHandler mediatorHandler,
             IMapper mapper)
         {
-            _categoryRepository = categoryRepository;
+            _ProductRepository = ProductRepository;
             _mediatorHandler = mediatorHandler;
             _mapper = mapper;
         }
 
-        public async Task<DefaultResult> Handle(AddCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<DefaultResult> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
             if (!ValidateCommand(request)) return new DefaultResult { Result = "Error", Success = false };
 
-            var category = _mapper.Map<Category>(request);
-            var entity = _mapper.Map<CategoryModel>(await _categoryRepository.AddCategory(category));
+            var product = _mapper.Map<Product>(request);
+            product.Enbled();
+            var entity = _mapper.Map<ProductModel>(await _ProductRepository.AddProduct(product));
 
-            var result = await _categoryRepository.UnitOfWork.Commit();
+            var result = await _ProductRepository.UnitOfWork.Commit();
 
             return new DefaultResult { Result = entity, Success = result };
         }
 
-        public async Task<DefaultResult> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<DefaultResult> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
             if (!ValidateCommand(request)) return new DefaultResult { Result = "Error", Success = false };
 
-            var categoria = _mapper.Map<Category>(request);
-            var entity = _mapper.Map<CategoryModel>(await _categoryRepository.UpdateCategory(categoria));
+            var product = _mapper.Map<Product>(request);
+            product.Enbled();
+            var entity = _mapper.Map<ProductModel>(await _ProductRepository.UpdateProduct(product));
 
-            var result = await _categoryRepository.UnitOfWork.Commit();
+            var result = await _ProductRepository.UnitOfWork.Commit();
 
             return new DefaultResult { Result = entity, Success = result };
         }

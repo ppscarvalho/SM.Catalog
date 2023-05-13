@@ -1,12 +1,13 @@
-﻿using SM.Catalog.Core.Application.Commands.Produvt.Validation;
+﻿using SM.Catalog.Core.Application.Commands.Product.Validation;
 using SM.Resource.Messagens;
 
-namespace SM.Catalog.Core.Application.Commands.Produvt
+namespace SM.Catalog.Core.Application.Commands.Product
 {
-    public class AddProductCommand : CommandHandler
+    public class UpdateProductCommand : CommandHandler
     {
         public Guid Id { get; private set; }
-        public Guid CategoriaId { get; private set; }
+        public Guid SupplierId { get; private set; }
+        public Guid CategoryId { get; private set; }
         public string? Name { get; private set; }
         public string? Description { get; private set; }
         public decimal PurchaseValue { get; private set; }
@@ -14,18 +15,22 @@ namespace SM.Catalog.Core.Application.Commands.Produvt
         public decimal ProfitMargin { get; private set; }
         public int Stock { get; set; }
 
-        public AddProductCommand(
+        public UpdateProductCommand() { }
+
+        public UpdateProductCommand(
             Guid id,
-            Guid categoriaId,
+            Guid supplierId,
+            Guid categoryId,
             string? name,
             string? description,
             decimal purchaseValue,
             decimal saleValue,
             decimal profitMargin,
-            int stock)
+            int stock) : this()
         {
             Id = id;
-            CategoriaId = categoriaId;
+            SupplierId = supplierId;
+            CategoryId = categoryId;
             Name = name;
             Description = description;
             PurchaseValue = purchaseValue;
@@ -38,7 +43,7 @@ namespace SM.Catalog.Core.Application.Commands.Produvt
 
         public override bool IsValid()
         {
-            ValidationResult = new AddProductCommandValidation().Validate(this);
+            ValidationResult = new UpdateProductCommandValidation().Validate(this);
             return ValidationResult.IsValid;
         }
     }

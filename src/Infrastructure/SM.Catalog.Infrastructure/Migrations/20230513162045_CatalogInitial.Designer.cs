@@ -11,7 +11,7 @@ using SM.Catalog.Infrastructure.DbContexts;
 namespace SM.Catalog.Infrastructure.Migrations
 {
     [DbContext(typeof(CatalogDbContext))]
-    [Migration("20230512042203_CatalogInitial")]
+    [Migration("20230513162045_CatalogInitial")]
     partial class CatalogInitial
     {
         /// <inheritdoc />
@@ -98,6 +98,9 @@ namespace SM.Catalog.Infrastructure.Migrations
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
+
+                    b.Property<Guid>("SupplierId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 

@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using SM.Catalog.Core.Application.Commands.Category;
+using SM.Catalog.Core.Application.Commands.Product;
 using SM.Catalog.Core.Application.Models;
 using SM.Catalog.Core.Domain.Entities;
-using SM.MQ.Models.Categoria;
+using SM.MQ.Models.Category;
+using SM.MQ.Models.Product;
 
 namespace SM.Catalog.Core.Application.AutoMappings
 {
@@ -19,22 +21,19 @@ namespace SM.Catalog.Core.Application.AutoMappings
             CreateMap<UpdateCategoryCommand, Category>().ReverseMap();
 
             CreateMap<Category, CategoryModel>().ReverseMap();
-            CreateMap<CategoryModel, ResponseCategoriaOut>().ReverseMap();
+            CreateMap<CategoryModel, ResponseCategoryOut>().ReverseMap();
 
 
-            //Response Categoria Out
-            //CreateMap<CategoryModel, ResponseCategoriaOut>().ReverseMap();
-            //CreateMap<ResponseCategoriaOut, AdicionarCategoriaCommand>().ReverseMap();
-            //CreateMap<ResponseCategoriaOut, AlterarCategoriaCommand>().ReverseMap();
+            //Add Product Command
+            CreateMap<ProductModel, AddProductCommand>().ReverseMap();
+            CreateMap<AddProductCommand, Product>().ReverseMap();
 
-            //Produto
-            //CreateMap<ProdutoViewModel, AdicionarProdutoCommand>().ReverseMap();
-            //CreateMap<AdicionarProdutoCommand, LojaInspiracao.Produto>().ReverseMap();
+            //Update Product Command
+            CreateMap<ProductModel, UpdateProductCommand>().ReverseMap();
+            CreateMap<UpdateProductCommand, Product>().ReverseMap();
 
-            //CreateMap<Product, ProdutoViewModel>().ForMember(
-            //    dest => dest.CategoriaViewModel,
-            //    opt => opt.MapFrom(b => b.Categoria)
-            //    ).ReverseMap();
+            CreateMap<Product, ProductModel>().ReverseMap();
+            CreateMap<ProductModel, ResponseProductOut>().ReverseMap();
         }
     }
 }

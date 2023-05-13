@@ -19,12 +19,12 @@ namespace SM.Catalog.Core.Application.Queries.Category
 
         public async Task<CategoryModel> Handle(GetCategoryByIdQuery query, CancellationToken cancellationToken)
         {
-            return _mapper.Map<CategoryModel>(await _categoryRepository.GetById(query.Id));
+            return _mapper.Map<CategoryModel>(await _categoryRepository.GetCategoryById(query.Id));
         }
 
         public async Task<IEnumerable<CategoryModel>> Handle(GetAllCategoryQuery query, CancellationToken cancellationToken)
         {
-            return _mapper.Map<IEnumerable<CategoryModel>>(await _categoryRepository.GetAll());
+            return _mapper.Map<IEnumerable<CategoryModel>>(await _categoryRepository.GetAllCategory());
         }
     }
 }

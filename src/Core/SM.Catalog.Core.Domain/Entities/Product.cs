@@ -6,6 +6,7 @@ namespace SM.Catalog.Core.Domain.Entities
 {
     public class Product : Entity, IAggregateRoot
     {
+        public Guid SupplierId { get; private set; }
         public Guid CategoryId { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
@@ -14,13 +15,20 @@ namespace SM.Catalog.Core.Domain.Entities
         public decimal ProfitMargin { get; private set; }
         public int Stock { get; private set; }
         public bool Status { get; private set; }
-
         public Category Category { get; private set; }
 
         public Product() { }
 
-        public Product(Guid categoryId, string nome, string description, decimal purchaseValue, decimal saleValue, decimal profitMargin)
+        public Product(
+            Guid supplierId,
+            Guid categoryId,
+            string nome,
+            string description,
+            decimal purchaseValue,
+            decimal saleValue,
+            decimal profitMargin)
         {
+            SupplierId = supplierId;
             CategoryId = categoryId;
             Name = nome;
             Description = description;
