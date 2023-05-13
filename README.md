@@ -8,11 +8,12 @@
 
 SM.Catalog
 <br/>-Core
-<br/>-SM.Catalog.Core.Application
-<br/>-SM.Catalog.Core.Domain
+<br/> -SM.Catalog.Core.Application
+<br/> -SM.Catalog.Core.Domain
 <br/>
 <br/>-Infrastructe
-<br/>-SM.Catalog.Infrastructe
+<br/> -SM.Catalog.Infrastructe
 <br/>
 <br/>-Apresentation
-<br/>-SM.Catalog.Apresentation.Api
+<br/> -SM.Catalog.Apresentation.Api
+[Blog do Da2k](https://blog.da2k.com.br)
