@@ -1,8 +1,12 @@
 ### Arquitetura de Sistemas Distribuidos - PUC-MINAS
 
-#### TCC - Trabalhode Conclusão de Curso
+#### Trabalhode Conclusão de Curso
 
-##### Data/Hora: 06/05/2023 15h00
+##### Disciplian: PROJETO INTEGRADO - ARQUITETURA DE SOFTWARE DISTRIBUÍDO (2022)
+
+##### Orienteador: Professor. Pedro Alves
+
+##### Iníco do desenvolvimento da API: 06/05/2023 15h00
 
 ##### A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto
 
