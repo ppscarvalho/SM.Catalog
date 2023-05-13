@@ -2,11 +2,9 @@
 
 #### TCC - Trabalhode Conclusão de Curso
 
-##### Roteiro do desenvolvimento da API SM.Catalog do SM - Store Management (Gestão de Loja)
-
 ##### Data/Hora: 06/05/2023 15h00
 
-##### Arquitetura da API
+##### Arquitetura da API SM.Catalog (Store Management) - Gestão de Loja
 
 SM.Catalog
 <br/>-Core
