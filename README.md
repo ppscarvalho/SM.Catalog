@@ -12,10 +12,8 @@ SM.Catalog
 <br/>-Core
 <br/>&nbsp; -SM.Catalog.Core.Application
 <br/>&nbsp; -SM.Catalog.Core.Domain
-<br/>
 <br/>-Infrastructure
 <br/>&nbsp; -SM.Catalog.Infrastructure
-<br/>
 <br/>-Apresentation
 <br/>&nbsp; -SM.Catalog.Apresentation.Api
 
