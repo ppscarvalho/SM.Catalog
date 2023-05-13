@@ -10,7 +10,7 @@
 
 #### Tecnologias usadas no desenvolvimento da API
 
-&nbsp; -ASP.NET Core 7.0
+-&nbsp;ASP.NET Core 7.0
 <br/>-&nbsp;Entity Framework Core 7.0
 <br/>-&nbsp;MassTransit
 <br/>-&nbsp;AutoMapper
