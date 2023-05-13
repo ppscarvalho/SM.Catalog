@@ -10,14 +10,15 @@
 
 #### Tecnologias usadas no desenvolvimento da API
 
-<br/>&nbsp; -ASP.NET Core 7.0
-<br/>&nbsp; -Entity Framework Core 7.0
-<br/>&nbsp; -MassTransit
-<br/>&nbsp; -AutoMapper
-<br/>&nbsp; -ASP.NET Core MVC
-<br/>&nbsp; -xUnit
-<br/>&nbsp; -Moq
-<br/>&nbsp; -Fluent Assertions
+&nbsp; -ASP.NET Core 7.0
+<br/>-&nbsp;Entity Framework Core 7.0
+<br/>-&nbsp;MassTransit
+<br/>-&nbsp;AutoMapper
+<br/>-&nbsp;ASP.NET Core MVC
+<br/>-&nbsp;xUnit
+<br/>-&nbsp;Mock
+<br/>-&nbsp;AutoFixture
+<br/>-&nbsp;Fluent Assertions
 
 ##### A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto
 
