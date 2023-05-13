@@ -4,7 +4,7 @@
 
 ##### Data/Hora: 06/05/2023 15h00
 
-##### A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto</>
+##### A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto
 
 ##### Arquitetura da API SM.Catalog (Store Management) - Gestão de Loja
 
