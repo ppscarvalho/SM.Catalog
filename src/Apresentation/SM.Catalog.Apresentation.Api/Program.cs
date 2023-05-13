@@ -1,4 +1,4 @@
-using SM.Catalog.Infrastructe.Extensions;
+using SM.Catalog.Infrastructure.Extensions;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
