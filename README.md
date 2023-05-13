@@ -6,7 +6,7 @@
 
 ##### Arquitetura da API SM.Catalog (Store Management) - Gestão de Loja
 
-<p>A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto</>
+<p>A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto</><br/>
 SM.Catalog
 <br/>-Core
 <br/>&nbsp; -SM.Catalog.Core.Application
