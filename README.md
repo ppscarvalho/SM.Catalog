@@ -24,11 +24,8 @@ SM.Catalog
     Referência para o desenvolvimento da APi SM.Catalog
   </p>
   <p>
-  [Implementing a Clean Architecture in ASP.NET Core 6](https://patelalpeshn.medium.com/implementing-a-clean-architecture-in-asp-net-core-6-985a31f717f5)
+
+[Implementing a Clean Architecture in ASP.NET Core 6](https://patelalpeshn.medium.com/implementing-a-clean-architecture-in-asp-net-core-6-985a31f717f5)
   </p>
-
-[Blog do Da2k](https://blog.da2k.com.br 'Clique e acesse agora!')
-
-<a href="https://blog.da2k.com.br" title="Clique e acesse agora!">Blog do Da2k</a>
 
 </blockquote>
