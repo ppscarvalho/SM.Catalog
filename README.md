@@ -4,9 +4,10 @@
 
 ##### Data/Hora: 06/05/2023 15h00
 
+##### A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto</>
+
 ##### Arquitetura da API SM.Catalog (Store Management) - Gestão de Loja
 
-<p>A API SM.Catalog será responsavel pelo cadastro de Categoria e de Produto</><br/>
 SM.Catalog
 <br/>-Core
 <br/>&nbsp; -SM.Catalog.Core.Application
