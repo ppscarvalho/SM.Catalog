@@ -22,12 +22,19 @@ namespace SM.Catalog.Infrastructure.Repositories
 
         public async Task<IEnumerable<Product>> GetAllProduct()
         {
-            return await _context.Product.AsNoTracking().ToListAsync();
+            return await _context.Product
+                .AsNoTracking()
+                .Include(p => p.Supplier)
+                .Include(p => p.Category)
+                .ToListAsync();
         }
 
         public async Task<Product> GetProductById(Guid id)
         {
-            return await _context.Product.FirstOrDefaultAsync(e => e.Id == id);
+            return await _context.Product
+                .Include(p => p.Supplier)
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(e => e.Id == id);
         }
 
         public async Task<Product> AddProduct(Product product)

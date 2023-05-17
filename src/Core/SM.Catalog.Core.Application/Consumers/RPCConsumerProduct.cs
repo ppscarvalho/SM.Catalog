@@ -2,6 +2,7 @@
 
 using AutoMapper;
 using MediatR;
+using SM.Catalog.Core.Application.Commands.Product;
 using SM.Catalog.Core.Application.Models;
 using SM.Catalog.Core.Application.Queries.Product;
 using SM.MQ.Models;
@@ -10,7 +11,6 @@ using SM.MQ.Operators;
 using SM.Resource.Communication.Mediator;
 using SM.Resource.Messagens.CommonMessage.Notifications;
 using SM.Util.Extensions;
-using SM.Catalog.Core.Application.Commands.Product;
 
 namespace SM.Catalog.Core.Application.Consumers
 {
@@ -75,9 +75,8 @@ namespace SM.Catalog.Core.Application.Consumers
 
         private async Task AddProduct(ConsumerContext<RequestIn> context)
         {
-            var ProductModel = context.Message.Result.DeserializeObject<ProductModel>();
-
-            var command = _mapper.Map<AddProductCommand>(ProductModel);
+            var productModel = context.Message.Result.DeserializeObject<ProductModel>();
+            var command = _mapper.Map<AddProductCommand>(productModel);
             var result = await _mediatorHandler.SendCommand(command);
 
             if (result.Success)
@@ -92,9 +91,8 @@ namespace SM.Catalog.Core.Application.Consumers
 
         private async Task UpdateProduct(ConsumerContext<RequestIn> context)
         {
-            var categoriaModel = context.Message.Result.DeserializeObject<ProductModel>();
-
-            var command = _mapper.Map<UpdateProductCommand>(categoriaModel);
+            var productModel = context.Message.Result.DeserializeObject<ProductModel>();
+            var command = _mapper.Map<UpdateProductCommand>(productModel);
             var result = await _mediatorHandler.SendCommand(command);
 
             if (result.Success)

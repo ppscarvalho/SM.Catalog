@@ -14,6 +14,7 @@ namespace SM.Catalog.Infrastructure.DbContexts
         private readonly IMediatorHandler _mediatorHandler;
         public DbSet<Category> Category { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Supplier> Supplier { get; set; }
 
         public CatalogDbContext(DbContextOptions<CatalogDbContext> options, IMediatorHandler mediatorHandler)
                 : base(options)

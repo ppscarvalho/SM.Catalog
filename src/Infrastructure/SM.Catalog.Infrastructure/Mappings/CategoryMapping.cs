@@ -19,4 +19,24 @@ namespace SM.Catalog.Infrastructure.Mappings
                 .HasForeignKey(p => p.CategoryId);
         }
     }
+
+    public class SupplierMapping : IEntityTypeConfiguration<Supplier>
+    {
+        public void Configure(EntityTypeBuilder<Supplier> builder)
+        {
+            builder.ToTable("Supplier");
+
+            builder.Property(c => c.Id)
+                .IsRequired();
+
+            builder.Property(c => c.CorporateName)
+                .HasMaxLength(100)
+                .IsRequired();
+
+            // 1 : N => Categorias : Produtos
+            builder.HasMany(c => c.Product)
+                .WithOne(p => p.Supplier)
+                .HasForeignKey(p => p.SupplierId);
+        }
+    }
 }

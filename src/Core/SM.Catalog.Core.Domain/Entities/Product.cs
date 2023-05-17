@@ -16,6 +16,7 @@ namespace SM.Catalog.Core.Domain.Entities
         public int Stock { get; private set; }
         public bool Status { get; private set; }
         public Category Category { get; private set; }
+        public Supplier Supplier { get; private set; }
 
         public Product() { }
 

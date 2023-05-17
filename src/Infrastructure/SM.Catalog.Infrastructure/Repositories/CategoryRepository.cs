@@ -22,7 +22,7 @@ namespace SM.Catalog.Infrastructure.Repositories
 
         public async Task<IEnumerable<Category>> GetAllCategory()
         {
-            return await _context.Category.AsNoTracking().ToListAsync();
+            return await _context.Category.AsNoTracking().OrderBy(c => c.Description).ToListAsync();
         }
 
         public async Task<Category> GetCategoryById(Guid id)

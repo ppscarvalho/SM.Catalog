@@ -11,5 +11,8 @@
         public decimal SaleValue { get; set; }
         public decimal ProfitMargin { get; set; }
         public int Stock { get; set; }
+
+        public CategoryModel CategoryModel { get; set; }
+        public SupplierModel SupplierModel { get; set; }
     }
 }
