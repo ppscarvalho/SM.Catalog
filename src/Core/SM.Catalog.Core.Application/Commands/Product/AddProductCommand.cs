@@ -8,7 +8,6 @@ namespace SM.Catalog.Core.Application.Commands.Product
         public Guid Id { get; private set; }
         public Guid SupplierId { get; private set; }
         public Guid CategoryId { get; private set; }
-        public string? Name { get; private set; }
         public string? Description { get; private set; }
         public decimal PurchaseValue { get; private set; }
         public decimal SaleValue { get; private set; }
@@ -31,7 +30,6 @@ namespace SM.Catalog.Core.Application.Commands.Product
             Id = id;
             SupplierId = supplierId;
             CategoryId = categoryId;
-            Name = name;
             Description = description;
             PurchaseValue = purchaseValue;
             SaleValue = saleValue;

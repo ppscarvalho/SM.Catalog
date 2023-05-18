@@ -8,7 +8,6 @@ namespace SM.Catalog.Core.Domain.Entities
     {
         public Guid SupplierId { get; private set; }
         public Guid CategoryId { get; private set; }
-        public string Name { get; private set; }
         public string Description { get; private set; }
         public decimal PurchaseValue { get; private set; }
         public decimal SaleValue { get; private set; }
@@ -23,7 +22,6 @@ namespace SM.Catalog.Core.Domain.Entities
         public Product(
             Guid supplierId,
             Guid categoryId,
-            string nome,
             string description,
             decimal purchaseValue,
             decimal saleValue,
@@ -31,7 +29,6 @@ namespace SM.Catalog.Core.Domain.Entities
         {
             SupplierId = supplierId;
             CategoryId = categoryId;
-            Name = nome;
             Description = description;
             PurchaseValue = purchaseValue;
             SaleValue = saleValue;
@@ -47,6 +44,17 @@ namespace SM.Catalog.Core.Domain.Entities
             Stock += stock;
         }
 
+        public void DebitStock(int quantity)
+        {
+            if (quantity < 0) quantity *= -1;
+            if (!HaveStock(quantity)) throw new DomainException("Estoque insuficiente");
+            Stock -= quantity;
+        }
+
+        public bool HaveStock(int quantity)
+        {
+            return Stock >= quantity;
+        }
         public override bool IsValid()
         {
             ValidationResult = new ProductValidation().Validate(this);

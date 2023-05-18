@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using SM.Catalog.Core.Application.Commands.Product;
 
 namespace SM.Catalog.Core.Application.Commands.Product.Validation
 {
@@ -18,10 +17,6 @@ namespace SM.Catalog.Core.Application.Commands.Product.Validation
             RuleFor(c => c.CategoryId)
                 .NotEqual(Guid.Empty)
                 .WithMessage("Categoria do produto não informado.");
-
-            RuleFor(c => c.Name)
-                .NotEmpty()
-                .WithMessage("O nome do produto não foi informado.");
 
             RuleFor(c => c.Description)
                 .NotEmpty()

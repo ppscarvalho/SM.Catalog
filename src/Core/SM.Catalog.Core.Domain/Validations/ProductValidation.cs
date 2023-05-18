@@ -19,10 +19,6 @@ namespace SM.Catalog.Core.Domain.Validations
                 .NotEqual(Guid.Empty)
                 .WithMessage("Categoria do produto não informado.");
 
-            RuleFor(c => c.Name)
-                .NotEmpty()
-                .WithMessage("O nome do produto não foi informado.");
-
             RuleFor(c => c.Description)
                 .NotEmpty()
                 .WithMessage("A descrição do produto não foi informada.");

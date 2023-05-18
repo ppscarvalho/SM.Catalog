@@ -16,10 +16,6 @@ namespace SM.Catalog.Infrastructure.Mappings
             builder.Property(c => c.CategoryId)
                 .IsRequired();
 
-            builder.Property(c => c.Name)
-                .HasMaxLength(100)
-                .IsRequired();
-
             builder.Property(c => c.Description)
                 .HasMaxLength(200)
                 .IsRequired();

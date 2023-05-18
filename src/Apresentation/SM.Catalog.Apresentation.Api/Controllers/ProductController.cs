@@ -5,6 +5,7 @@ using SM.Catalog.Apresentation.Api.Controllers.BaseController;
 using SM.Catalog.Core.Application.Commands.Product;
 using SM.Catalog.Core.Application.Models;
 using SM.Catalog.Core.Application.Queries.Product;
+using SM.MQ.Models.Product;
 using SM.Resource.Communication.Mediator;
 using SM.Resource.Messagens.CommonMessage.Notifications;
 using SM.Resource.Util;
@@ -36,7 +37,7 @@ namespace SM.Catalog.Apresentation.Api.Controllers
         [HttpPost]
         [Route("GetProductById")]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(ProductModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseProductOut), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetProductById([FromBody] GetProductByIdQuery query)
         {
             _logger.LogInformation("Obter todas as categorias");

@@ -22,6 +22,7 @@ namespace SM.Catalog.Core.Application.AutoMappings
             CreateMap<UpdateCategoryCommand, Category>().ReverseMap();
 
             CreateMap<Category, CategoryModel>().ReverseMap();
+            CreateMap<Category, ResponseCategoryOut>().ReverseMap();
             CreateMap<CategoryModel, ResponseCategoryOut>().ReverseMap();
 
 
@@ -34,16 +35,16 @@ namespace SM.Catalog.Core.Application.AutoMappings
             CreateMap<UpdateProductCommand, Product>().ReverseMap();
 
             CreateMap<Supplier, SupplierModel>().ReverseMap();
-            CreateMap<SupplierModel, ResponseSupplierOut>().ReverseMap();
+            CreateMap<Supplier, ResponseSupplierOut>().ReverseMap();
 
             CreateMap<Product, ProductModel>()
-                .ForMember(dest => dest.CategoryModel, act => act.MapFrom(src => src.Category))
-                .ForMember(dest => dest.SupplierModel, act => act.MapFrom(src => src.Supplier))
+                .ForMember(dest => dest.ResponseCategoryOut, act => act.MapFrom(src => src.Category))
+                .ForMember(dest => dest.ResponseSupplierOut, act => act.MapFrom(src => src.Supplier))
                 .ReverseMap();
 
             CreateMap<ProductModel, ResponseProductOut>()
-                .ForMember(dest => dest.ResponseCategoryOut, act => act.MapFrom(src => src.CategoryModel))
-                .ForMember(dest => dest.ResponseSupplierOut, act => act.MapFrom(src => src.SupplierModel))
+                .ForMember(dest => dest.ResponseCategoryOut, act => act.MapFrom(src => src.ResponseCategoryOut))
+                .ForMember(dest => dest.ResponseSupplierOut, act => act.MapFrom(src => src.ResponseSupplierOut))
                 .ReverseMap();
         }
     }
