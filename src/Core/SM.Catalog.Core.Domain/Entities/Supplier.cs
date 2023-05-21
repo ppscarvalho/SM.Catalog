@@ -7,6 +7,7 @@ namespace SM.Catalog.Core.Domain.Entities
     {
         public Guid Id { get; set; }
         public string? CorporateName { get; set; }
+        public string? FantasyName { get; set; }
 
         // EF Relation
         public ICollection<Product> Product { get; set; }
